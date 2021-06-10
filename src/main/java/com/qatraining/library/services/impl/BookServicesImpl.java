@@ -28,6 +28,11 @@ public class BookServicesImpl implements BookServices {
 
 	@Override
 	public BookDTO findByName(String bookName) {
+//		BookDTO bookDTO = new BookDTO();
+//		
+//		 bookDTO = mapper.entityToBookDto(bookRepository.findByBookName(bookName).get());
+//		
+//		return bookDTO;
 		return mapper.entityToBookDto(bookRepository.findByBookName(bookName).get());
 		
 	}

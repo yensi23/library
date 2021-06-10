@@ -2,11 +2,19 @@ package com.qatraining.library.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.AccessLevel;
 
-
+@Builder
+@ApiModel(value = "BookDTO")
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
+@NoArgsConstructor(access = AccessLevel.PACKAGE)
 public class BookDTO {
 	
 	@ApiModelProperty(value="bookId", required = true)
